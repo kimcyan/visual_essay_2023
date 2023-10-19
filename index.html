@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>My e-Book</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+  </head>
+  <body id="site-background">
+    <menu class="menu-wrapper" id="menu-wrapper">
+      <button class="btn menu-btn" id="list-btn">
+        <span class="material-symbols-rounded">format_list_bulleted</span>
+        목차
+      </button>
+      <div class="menu-right">
+        <button class="btn menu-btn" id="reset-btn">
+          되돌리기
+          <span class="material-symbols-rounded">restart_alt</span>
+        </button>
+        <button class="btn menu-btn" id="help-btn">
+          도움말
+          <span class="material-symbols-rounded">help</span>
+        </button>
+      </div>
+    </menu>
+    <nav class="nav-wrapper invisible" id="nav-wrapper">
+      <div class="nav-inner">
+        <div class="nav-title-wrap">
+          <div class="nav-title bold">목차</div>
+          <button class="btn" id="nav-close-btn">
+            <span class="material-symbols-rounded">close</span>
+          </button>
+        </div>
+        <div class="book-info">
+          <div class="book-title bold">50/50</div>
+          <div class="book-author">안채영</div>
+        </div>
+        <ul class="nav-list-wrap">
+          <li class="nav-list">처음으로</li>
+          <li class="nav-list">목차</li>
+          <li class="nav-list">1 "어휴, 답답해"</li>
+          <li class="nav-list">2 "추천해주세요"</li>
+          <li class="nav-list">3 "아무거나"</li>
+          <li class="nav-list">4 "랜덤 적용"</li>
+          <li class="nav-list">5 "글쎄"</li>
+          <li class="nav-list">6 "투표할게요"</li>
+          <li class="nav-list">7 "어떡하지"</li>
+          <li class="nav-list">8 "그냥"</li>
+          <li class="nav-list">선택 결과 보고서</li>
+          <li class="nav-list">맺음말</li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main-wrapper" id="main-wrapper">
+      <button class="btn paging-btn" id="prev-btn" disabled>
+        <span class="material-symbols-rounded">chevron_left</span>
+      </button>
+      <button class="btn paging-btn" id="next-btn">
+        <span class="material-symbols-rounded">chevron_right</span>
+      </button>
+      <div class="contents-wrapper">
+        <div class="page-content open">
+          <div class="img-box">
+            <svg
+              class="bg-cut"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1200"
+              height="1080"
+              viewBox="0 0 1200 1080"
+              fill="none">
+              <path d="M0 1080L428 0H1200V1080H0Z" fill="#00974E" />
+            </svg>
+            <img src="./resource/cover_img.webp" />
+          </div>
+          <div class="cover-text">
+            <div class="cover-title bold">50/50</div>
+            <div class="cover-author">글·그림 안채영</div>
+          </div>
+        </div>
+        <div class="page-content invisible">
+          <div class="index-wrap">
+            <div class="index-title bold">목차</div>
+            <div class="index-list-wrap">
+              <div class="index-subwrap index-1">
+                <div class="index-title bold">물건</div>
+                <div class="index-list">
+                  <div class="index-list-content">
+                    <span>1</span>
+                    <span>"어휴, 답답해"</span>
+                  </div>
+                  <div class="index-list-content">
+                    <span>2</span>
+                    <span>"추천해주세요"</span>
+                  </div>
+                  <div class="index-list-content">
+                    <span>3</span>
+                    <span>"아무거나"</span>
+                  </div>
+                  <div class="index-list-content">
+                    <span>4</span>
+                    <span>"랜덤 적용"</span>
+                  </div>
+                </div>
+              </div>
+              <hr class="index-line" />
+              <div class="index-subwrap index-2">
+                <div class="index-title bold">상황</div>
+                <div class="index-list">
+                  <div class="index-list-content">
+                    <span>5</span>
+                    <span>"글쎄"</span>
+                  </div>
+                  <div class="index-list-content">
+                    <span>6</span>
+                    <span>"투표할게요"</span>
+                  </div>
+                  <div class="index-list-content">
+                    <span>7</span>
+                    <span>"어떡하지"</span>
+                  </div>
+                  <div class="index-list-content">
+                    <span>8</span>
+                    <span>"그냥"</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-content ep1 invisible">
+          <div class="img-box">
+            <img id="ep1-fork" src="./resource/ep1_static_1.webp" />
+            <img id="ep1-1" src="./resource/ep1_click_1-1.webp" />
+            <img id="ep1-1-1" src="./resource/ep1_click_1-2.webp" />
+            <img
+              id="ep1-2"
+              usemap="#image-map1"
+              src="./resource/ep1_click_2.webp" />
+            <map name="image-map1">
+              <area
+                href="#"
+                coords="1227,317,1297,303,1433,278,1581,286,1668,313,1676,342,1674,381,1647,414,1631,427,1605,410,1531,400,1509,412,1500,444,1493,436,1485,400,1439,412,1424,422,1407,415,1376,429,1363,446,1334,437,1305,441,1297,495,1283,498,1283,453,1261,448,1198,475,1158,507,1149,531,1153,566,1149,595,1134,595,1124,582,1129,539,1102,500,1088,458,1091,404,1110,371,1137,356"
+                shape="poly"
+                onclick="clickEp1Map1()" />
+              <area
+                href="#"
+                coords="1351,473,1331,478,1336,514,1295,504,1270,521,1281,549,1237,580,1219,632,1225,690,1247,726,1266,743,1254,770,1261,795,1261,816,1263,858,1295,870,1290,849,1356,846,1398,863,1458,870,1539,838,1546,821,1539,804,1546,783,1532,773,1558,746,1551,717,1534,710,1534,692,1548,671,1548,648,1534,621,1549,621,1556,605,1546,598,1565,583,1560,565,1549,558,1553,526,1532,485,1500,453,1468,449,1436,478,1404,478,1375,492"
+                shape="poly"
+                onclick="clickEp1Map2()" />
+            </map>
+          </div>
+          <div class="text-box">
+            <div class="text-title bold">“어휴, 답답해”</div>
+            <div class="text-content">
+              친언니는 나와 함께 외출을 하면 한 번 이상은 가슴을 치며
+              답답해했다.
+              <br />
+              여러 상황이 있지만 점심 메뉴를 고를 때가 가희 최고라 말할 수 있다.
+              <br />
+              <br />
+              나는 무려 한식vs양식을 고르지 못해 언니가 양식을 골라주고,
+              <br />
+              다시 돈까스vs파스타를 한참 고르지 못해
+              <br />
+              평소 언니가 좋아하던 크림 파스타 집에 가기로 했다.
+            </div>
+          </div>
+        </div>
+        <div class="page-content ep2 invisible">
+          <div class="img-box">
+            <img id="ep2-bread-bot" src="./resource/ep2_static_2.webp" />
+            <img
+              class="ep2-click"
+              id="ep2-lettuce"
+              src="./resource/ep2_click_6.webp" />
+            <img
+              class="ep2-click"
+              id="ep2-bacon-shadow"
+              src="./resource/ep2_click_5-2.webp" />
+            <img
+              class="ep2-click"
+              id="ep2-bacon"
+              src="./resource/ep2_click_5.webp" />
+            <img
+              class="ep2-click"
+              id="ep2-tomato"
+              src="./resource/ep2_click_4.webp" />
+            <img
+              class="ep2-click"
+              id="ep2-cheese"
+              src="./resource/ep2_click_3.webp" />
+            <img
+              class="ep2-click"
+              id="ep2-onion"
+              src="./resource/ep2_click_2.webp" />
+            <img
+              class="ep2-click"
+              id="ep2-cucumber"
+              src="./resource/ep2_click_1.webp" />
+            <img id="ep2-bread-top" src="./resource/ep2_static_1.webp" />
+          </div>
+          <div class="text-box">
+            <div class="text-title bold">“추천해주세요”</div>
+            <div class="text-content">
+              써브웨이가 한국 시장에 진출하면서
+              <br />
+              커스텀에 열광하는 사람들이 환호했다.
+              <br />
+              ‘다양한 재료 중에 조합할 수 있다’는 굉장한 장점이지만
+              <br />
+              하나의 완전한 메뉴조차 잘 고르지 못하는 사람에게는
+              <br />
+              거대한 난관이 아닐 수 없다.
+              <br />
+              <br />
+              “빵이요? 빵은, 어... 플랫으로 해주시고요,
+              <br />
+              치즈는... 모차렐라 치즈로 해주세요.
+              <br />
+              야채는, 어... 올리브 빼고 다 넣어주세요. 소스요? 소스...
+              <br />
+              음, 그냥 매운 거 빼고 추천하는 거 넣어주세요.”
+              <br />
+            </div>
+          </div>
+        </div>
+        <div class="page-content ep3 invisible">
+          <div class="img-box">
+            <svg
+              class="bg-cut"
+              xmlns="http://www.w3.org/2000/svg"
+              width="991"
+              height="810"
+              viewBox="0 0 991 810"
+              fill="none">
+              <path d="M990.5 0H601L0 810H990.5V0Z" fill="#131641" />
+            </svg>
+            <img id="ep3-person" src="./resource/ep3_static_1.webp" />
+            <img
+              class="ep3-click"
+              id="ep3-case6"
+              src="./resource/ep3_click_6.webp" />
+            <img
+              class="ep3-click"
+              id="ep3-case5"
+              src="./resource/ep3_click_5.webp" />
+            <img
+              class="ep3-click"
+              id="ep3-case4"
+              src="./resource/ep3_click_4.webp" />
+            <img
+              class="ep3-click"
+              id="ep3-case3"
+              src="./resource/ep3_click_3.webp" />
+            <img
+              class="ep3-click"
+              id="ep3-case2"
+              src="./resource/ep3_click_2.webp" />
+            <img
+              class="ep3-click"
+              id="ep3-case1"
+              src="./resource/ep3_click_1.webp" />
+          </div>
+          <div class="text-box">
+            <div class="text-title bold">“아무거나”</div>
+            <div class="text-content">
+              ‘아무거나’는 과거 미국에서 가장 짜증나는 말로
+              <br />
+              선정될 정도로 거의 모든 사람들이 싫어하는 말이다.
+              <br />
+              실제로 나는 ‘아무거나’라는 대답으로
+              <br />
+              주변인들에게 곤란한 표정을 짓게 했다.
+              <br />
+              몇 번의 경험과 실패를 통해 그런 식의 대답은
+              <br />
+              피하는 게 좋다는 것을 알고 있다.
+              <br />
+              <br />
+              “핸드폰 케이스는 어떤 색으로 하시겠어요?”
+              <br />
+              <br />
+              세상에, 핸드폰을 바꾸려다 일생일대의 고민을 해야 했다.
+            </div>
+          </div>
+        </div>
+        <div class="page-content ep4 invisible">
+          <div class="img-box"></div>
+          <div class="text-box">
+            <div class="text-title bold">“랜덤적용”</div>
+            <div class="text-content">
+              처음으로 3D 그래픽의 게임을 시작할 때는 설레었다.
+              <br />
+              2D 그래픽 게임에 비해 구경할 것도 많고
+              <br />
+              적당히 돌아다니는 것도 즐거울 것 같았다.
+              <br />
+              <br />
+              다른 사람들이 올린 스크린샷만 보고 간과한 것이 있다.
+              <br />
+              차원이 한 단계 높아진다는 것은
+              <br />
+              곧 내가 바꿀 수 있는 설정도 더 많아진다는 것이다.
+              <br />
+              <br />
+              어차피 꾸밀 수 있는 거 초기 모습과는 다르게 하고 싶은데
+              <br />
+              어떻게 바꾸어야 할지 모르겠다.
+              <br />
+              캐릭터 하나 만드는데 무슨 설정이 그렇게 많은지!
+              <br />
+              <br />
+              그때, 날 위해 반짝이는 버튼이 하나 있었다.
+              <br />
+              너만 믿을게!
+            </div>
+          </div>
+        </div>
+        <div class="page-content ep5 invisible">
+          <div class="img-box">
+            <img id="ep5-compass-back" src="./resource/ep5_static_2.webp" />
+            <img id="ep5-arrow" src="./resource/ep5_arrow.webp" />
+            <img id="ep5-compass-front" src="./resource/ep5_static_1.webp" />
+            <img id="ep5-magnet" src="./resource/ep5_magnet.webp" />
+          </div>
+          <div class="text-box">
+            <div class="text-title bold">“글쎄”</div>
+            <div class="text-content">
+              초등학생 때부터 학기 첫날에 하던 설문조사에는
+              <br />
+              늘 장래희망을 적는 칸이 있다.
+              <br />
+              이따 먹을 점심 메뉴가 더 중요했던 나는
+              <br />
+              계속 ‘대통령’ 이나 ‘외교관’을 적어 냈다.
+              <br />
+              그건 우리반의 공부 잘하는 애들이 적어냈던 직업이었다.
+              <br />
+              <br />
+              어쩌다 디자인과에 왔지만
+              <br />
+              이것도 시도해보고 싶고, 저것도 시도해보고 싶다.
+              <br />
+              <br />
+              내가 정말 하고 싶은 일은 뭐고, 어떤 작품을 만들어보고 싶고,
+              <br />
+              그래서 어느 회사에 이력서를 넣어보고 싶은가?
+            </div>
+          </div>
+        </div>
+        <div class="page-content ep6 invisible">
+          <div class="img-box">
+            <img id="ep6-back-cookie" src="./resource/ep6_static_3.webp" />
+            <img id="ep6-thread-back" src="./resource/ep6_static_2.webp" />
+            <img class="ep6-click" src="./resource/ep6_click_5.webp" />
+            <img class="ep6-click" src="./resource/ep6_click_4.webp" />
+            <img class="ep6-click" src="./resource/ep6_click_3.webp" />
+            <img class="ep6-click" src="./resource/ep6_click_2.webp" />
+            <img class="ep6-click" src="./resource/ep6_click_1.webp" />
+            <img id="ep6-thread-front" src="./resource/ep6_static_1.webp" />
+          </div>
+          <div class="text-box">
+            <div class="text-title bold">“투표할게요”</div>
+            <div class="text-content">
+              대학 수업을 들으면서 최대의 위기로 느꼈던 순간은
+              <br />
+              팀 프로젝트의 팀장을 맡았던 때였다.
+              <br />
+              <br />
+              선택을 못하는 사람이 팀장을 맡게 되면
+              <br />
+              어떤 일이 벌어지는지 아는가?
+              <br />
+              부디 모르길 바란다.
+              <br />
+              <br />
+              팀장이 되자 의견이 대립할 때마다 각 의견의
+              <br />
+              장단점을 따져가며 머리 아픈 선택을 해야만 했다.
+              <br />
+              <br />
+              어쩔 수 없이 민주주의의 상징인
+              <br />
+              투표를 진행하기로 했다.
+              <br />
+              어느 한 쪽으로 기울어지지 않은 선택을 하려면
+              <br />
+              기존에 효율성이 입증된 방법을 활용하는 것이 좋다.
+              <br />
+              <br />
+              근데 아뿔싸, 우리 팀은 4명이다!
+            </div>
+          </div>
+        </div>
+        <div class="page-content ep7 invisible">
+          <div class="img-box"></div>
+          <div class="text-box">
+            <div class="text-title bold">“어떡하지”</div>
+            <div class="text-content">
+              좋아하는 작가가 페어에 나온다는 소식을 들었다.
+              <br />
+              딱히 좋아하는 건 아니지만
+              <br />
+              약간 관심이 있는 작가들도 온다고 했다.
+              <br />
+              막상 가려고 하니 왕복 시간이나
+              <br />
+              혼잡할 예정인 페어 상황 때문에 고민이 됐다.
+              <br />
+              당장 내일인데 어떡하지?
+              <br />
+              고민하던 나는 무려 인터넷 검색창에
+              <br />
+              고민을 적는 황당한 행동을 하고 만다.
+              <br />
+              <br />
+              그리고 나온 명언,
+              <br />
+              “갈까 말까 할 때는 가라”
+              <br />
+              <br />
+              일단 갔다. 그건 최고의 선택이었다.
+            </div>
+          </div>
+        </div>
+        <div class="page-content ep8 invisible">
+          <div class="img-box">
+            <svg
+              class="bg-cut-w"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1920"
+              height="960"
+              viewBox="0 0 1920 960"
+              fill="none">
+              <path d="M0 366V0H1920V959.5L0 366Z" fill="#24363D" />
+            </svg>
+            <img id="ep8-people" src="./resource/ep8_static_1.webp" />
+            <img class="ep8-click" src="./resource/ep8_click_3.webp" />
+            <img class="ep8-click" src="./resource/ep8_click_2.webp" />
+            <img class="ep8-click" src="./resource/ep8_click_1.webp" />
+          </div>
+          <div class="text-box">
+            <div class="text-title bold">“그냥”</div>
+            <div class="text-content">
+              기억은 안 나지만 어느 순간부터 ‘그냥’이라는 단어를 입에 붙이고
+              살았던 것 같다.
+              <br />
+              나중에 알았지만 이 단어는 사람이 굉장히 태평하고 생각없어 보이게
+              만드는 단어다.
+              <br />
+              내가 ‘그냥’을 많이 사용한다는 사실을 의식한 뒤로 한 가지를
+              깨달았다.
+              <br />
+              ‘그냥’은 ‘아무런 이유가 없다’는 뜻이지만 중요한 건 ‘그냥’ 뒤에
+              오는 문장이다.
+              <br />
+              모든 답에 대한 이유를 ‘그냥’이라고 얼버무리지만
+              <br />
+              사실 뒤에 숨겨진 수많은 이유를 설명할 단어를 찾지 못한 것일지도
+              모른다.
+            </div>
+          </div>
+        </div>
+        <div class="page-content invisible">선택 결과 보고서</div>
+        <div class="page-content invisible">맺음말</div>
+      </div>
+    </main>
+    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./imageMapResizer.min.js"></script>
+  </body>
+</html>
