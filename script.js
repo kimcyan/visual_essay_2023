@@ -116,12 +116,12 @@ const map1 = document.querySelector('map[name="image-map1"]');
 
 const clickEp1Map1 = () => {
   console.log('click');
-  ep1Img2.classList.add('invisible');
+  ep1Img1.classList.add('invisible');
+  ep1Img1dash1.classList.add('invisible');
   disableMap(map1);
 };
 const clickEp1Map2 = () => {
   console.log('click');
-  ep1Img1.classList.add('invisible');
-  ep1Img1dash1.classList.add('invisible');
+  ep1Img2.classList.add('invisible');
   disableMap(map1);
 };
