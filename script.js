@@ -24,7 +24,7 @@ let backgroundColor = [
   '#218b59',
   '#3e48a7',
   '#314d57',
-  'white',
+  '#aaa',
   'white',
 ];
 
@@ -42,6 +42,7 @@ const showPage = (index) => {
     pageContents[index].classList.toggle('open');
     changeBackgroundColor(index);
     currentPage = index;
+    togglePageBtnDisabled(currentPage);
   }, 200);
 };
 
@@ -63,7 +64,6 @@ prevBtn.addEventListener('click', () => {
   if (canClick) {
     canClick = false;
     showPage(currentPage - 1);
-    togglePageBtnDisabled(currentPage - 1);
     setTimeout(() => {
       canClick = true;
       imageMapResize();
@@ -74,7 +74,6 @@ nextBtn.addEventListener('click', () => {
   if (canClick) {
     canClick = false;
     showPage(currentPage + 1);
-    togglePageBtnDisabled(currentPage + 1);
     setTimeout(() => {
       canClick = true;
       imageMapResize();
@@ -125,3 +124,6 @@ const clickEp1Map2 = () => {
   ep1Img2.classList.add('invisible');
   disableMap(map1);
 };
+
+/* ep2 */
+const ep2Imgs = document.querySelectorAll('.ep2-click');

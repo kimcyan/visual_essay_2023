@@ -331,6 +331,68 @@
 .ep2 .text-box {
   text-align: right;
 }
+#ep2-bread-bot,
+#ep2-lettuce,
+#ep2-bacon-shadow,
+#ep2-bacon {
+  animation: transformXYep2Soft1 7s infinite;
+}
+@keyframes transformXYep2Soft1 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+  50% {
+    transform: translate(
+        calc(min(0.625vw, 1.115vh)),
+        calc(min(0.625vw, 1.115vh) * (-1))
+      )
+      rotate(0.5deg);
+  }
+}
+
+#ep2-cheese,
+#ep2-bread-top {
+  animation: transformXYep2Soft2 7s infinite;
+}
+#ep2-tomato {
+  transform: translate(
+      calc(min(0.625vw, 1.115vh)),
+      calc(min(0.625vw, 1.115vh) * (-1))
+    )
+    rotate(0.8deg);
+  animation: transformXYep2Soft2 7s 1s infinite;
+}
+#ep2-onion {
+  transform: translate(
+      calc(min(0.625vw, 1.115vh)),
+      calc(min(0.625vw, 1.115vh) * (-1))
+    )
+    rotate(0.8deg);
+  animation: transformXYep2Soft2 7s 0.5s infinite;
+}
+#ep2-cucumber {
+  transform: translate(
+      calc(min(0.625vw, 1.115vh)),
+      calc(min(0.625vw, 1.115vh) * (-1))
+    )
+    rotate(0.8deg);
+  animation: transformXYep2Soft2 7s 0.8s infinite;
+}
+
+@keyframes transformXYep2Soft2 {
+  0%,
+  100% {
+    transform: translate(
+        calc(min(0.625vw, 1.115vh)),
+        calc(min(0.625vw, 1.115vh) * (-1))
+      )
+      rotate(0.8deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
 /* ep3 */
 .ep3 .text-box {
   color: #131641;
@@ -421,6 +483,8 @@
 }
 
 /* ep8 */
+
+/* 선택 결과 */
 
 /*페이지 전환 애니메이션*/
 @keyframes fadein {
