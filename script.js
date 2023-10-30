@@ -102,6 +102,30 @@ indexListItems.forEach((item, index) => {
   });
 });
 
+const ep1Select = null;
+const ep2Select = null;
+const ep3Select = null;
+const ep4Select = null;
+const ep5Select = {
+  direction: null,
+  anlge: null,
+};
+const ep6Select = null;
+const ep8Select = null;
+
+/* 선택 결과 보고서 */
+const reportContainers = document.querySelectorAll('.tr-txt');
+const reportContents = [
+  `점심은 ${ep1Select}으로 먹을래`,
+  `샌드위치에서 ${ep2Select} 빼주세요`,
+  `폰 케이스는 ${ep3Select}이 좋겠어요`,
+  `캐릭터는 ${ep4Select}로 꾸며야겠어`,
+  `인생의 방향은 <span class="color: #F05052">${ep5Select.direction}으로 <span class="color: #639EEA">약 ${ep5Select.angle}</span>`,
+  `난 ${ep6Select} 편이야!`,
+  `이렇게 해보는 건 <span class="color: #0F156D">어때?</span>`,
+  `마스크 속 당신은 ${ep8Select}`,
+];
+
 /* 이미지 클릭 이벤트 */
 const disableMap = (map) => {
   map.parentNode.removeChild(map);
@@ -165,9 +189,6 @@ const ep8Imgs = document.querySelectorAll('.ep8-click');
 const map8 = document.querySelector('map[name="image-map8"]');
 
 clickToInvisible(map8, ep8Imgs);
-
-/* 선택 결과 보고서 */
-const reportTxts = document.querySelectorAll('.tr-txt');
 
 // 날짜
 let today = new Date();
