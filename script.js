@@ -25,7 +25,6 @@ let backgroundColor = [
   '#3e48a7',
   '#314d57',
   '#aaa',
-  'white',
 ];
 
 const toggleDisplay = (element) => {
@@ -44,6 +43,9 @@ const showPage = (index) => {
     currentPage = index;
     togglePageBtnDisabled(currentPage);
   }, 200);
+  setTimeout(() => {
+    imageMapResize();
+  }, 401);
 };
 
 listBtn.addEventListener('click', () => {
@@ -66,7 +68,6 @@ prevBtn.addEventListener('click', () => {
     showPage(currentPage - 1);
     setTimeout(() => {
       canClick = true;
-      imageMapResize();
     }, 401);
   }
 });
@@ -76,7 +77,6 @@ nextBtn.addEventListener('click', () => {
     showPage(currentPage + 1);
     setTimeout(() => {
       canClick = true;
-      imageMapResize();
     }, 401);
   }
 });
@@ -87,7 +87,7 @@ const togglePageBtnDisabled = (index) => {
   } else {
     prevBtn.disabled = false;
   }
-  if (index === 11) {
+  if (index === 10) {
     nextBtn.disabled = true;
   } else {
     nextBtn.disabled = false;
@@ -107,23 +107,72 @@ const disableMap = (map) => {
   map.parentNode.removeChild(map);
 };
 
-/* ep1 */
-const ep1Img1 = document.querySelector('#ep1-1');
-const ep1Img1dash1 = document.querySelector('#ep1-1-1');
-const ep1Img2 = document.querySelector('#ep1-2');
+const clickToInvisible = (map, imgs) => {
+  const maps = map.querySelectorAll('area');
+  maps.forEach((element, index) => {
+    element.addEventListener('click', () => {
+      imgs[index].classList.add('invisible');
+      disableMap(map);
+    });
+  });
+};
+
+// ep1
+const ep1Imgs = document.querySelectorAll('.ep1-click');
 const map1 = document.querySelector('map[name="image-map1"]');
 
-const clickEp1Map1 = () => {
-  console.log('click');
-  ep1Img1.classList.add('invisible');
-  ep1Img1dash1.classList.add('invisible');
-  disableMap(map1);
-};
-const clickEp1Map2 = () => {
-  console.log('click');
-  ep1Img2.classList.add('invisible');
-  disableMap(map1);
+clickToInvisible(map1, ep1Imgs);
+
+// ep2
+const ep2Imgs = document.querySelectorAll('.ep2-click');
+const map2 = document.querySelector('map[name="image-map2"]');
+
+clickToInvisible(map2, ep2Imgs);
+
+// ep3
+const ep3Imgs = document.querySelectorAll('.ep3-click');
+const map3 = document.querySelector('map[name="image-map3"]');
+
+const caseColorHue = [
+  [0, 12, 335, 318, 183, 104],
+  [348, 0, 325, 312, 163, 89],
+  [24, 50, 0, 345, 223, 167],
+  [28, 49, 9, 0, 228, 146],
+  [155, 165, 132, 120, 0, 289],
+  [206, 232, 196, 178, 63, 0],
+];
+const changeCaseColor = (map, imgs) => {
+  const maps = map.querySelectorAll('area');
+  maps.forEach((element, index) => {
+    element.addEventListener('click', () => {
+      for (i = 0; i < 6; i++) {
+        imgs[i].style.filter = 'hue-rotate(' + caseColorHue[i][index] + 'deg)';
+      }
+    });
+  });
 };
 
-/* ep2 */
-const ep2Imgs = document.querySelectorAll('.ep2-click');
+changeCaseColor(map3, ep3Imgs);
+
+// ep6
+const ep6Imgs = document.querySelectorAll('.ep6-click');
+const map6 = document.querySelector('map[name="image-map6"]');
+
+clickToInvisible(map6, ep6Imgs);
+
+// ep8
+const ep8Imgs = document.querySelectorAll('.ep8-click');
+const map8 = document.querySelector('map[name="image-map8"]');
+
+clickToInvisible(map8, ep8Imgs);
+
+/* 선택 결과 보고서 */
+const reportTxts = document.querySelectorAll('.tr-txt');
+
+// 날짜
+let today = new Date();
+let tY = today.getFullYear();
+let tM = today.getMonth();
+let tD = today.getDate();
+document.querySelector('#report-date').innerHTML =
+  tY + '년 ' + tM + '월 ' + tD + '일 ';

@@ -52,7 +52,6 @@
           <li class="nav-list">7 "어떡하지"</li>
           <li class="nav-list">8 "그냥"</li>
           <li class="nav-list">선택 결과 보고서</li>
-          <li class="nav-list">맺음말</li>
         </ul>
       </div>
     </nav>
@@ -135,23 +134,27 @@
         <div class="page-content ep1 invisible">
           <div class="img-box">
             <img id="ep1-fork" src="./resource/ep1_static_1.webp" />
-            <img id="ep1-1" src="./resource/ep1_click_1-1.webp" />
-            <img id="ep1-1-1" src="./resource/ep1_click_1-2.webp" />
+            <div class="ep1-click">
+              <img id="ep1-1" src="./resource/ep1_click_1-1.webp" />
+              <img id="ep1-1-1" src="./resource/ep1_click_1-2.webp" />
+            </div>
             <img
-              id="ep1-2"
+              class="ep1-click"
               usemap="#image-map1"
               src="./resource/ep1_click_2.webp" />
             <map name="image-map1">
               <area
+                alt="한식?"
+                title="한식?"
                 href="#"
                 coords="1227,317,1297,303,1433,278,1581,286,1668,313,1676,342,1674,381,1647,414,1631,427,1605,410,1531,400,1509,412,1500,444,1493,436,1485,400,1439,412,1424,422,1407,415,1376,429,1363,446,1334,437,1305,441,1297,495,1283,498,1283,453,1261,448,1198,475,1158,507,1149,531,1153,566,1149,595,1134,595,1124,582,1129,539,1102,500,1088,458,1091,404,1110,371,1137,356"
-                shape="poly"
-                onclick="clickEp1Map1()" />
+                shape="poly" />
               <area
+                alt="양식?"
+                title="양식?"
                 href="#"
                 coords="1351,473,1331,478,1336,514,1295,504,1270,521,1281,549,1237,580,1219,632,1225,690,1247,726,1266,743,1254,770,1261,795,1261,816,1263,858,1295,870,1290,849,1356,846,1398,863,1458,870,1539,838,1546,821,1539,804,1546,783,1532,773,1558,746,1551,717,1534,710,1534,692,1548,671,1548,648,1534,621,1549,621,1556,605,1546,598,1565,583,1560,565,1549,558,1553,526,1532,485,1500,453,1468,449,1436,478,1404,478,1375,492"
-                shape="poly"
-                onclick="clickEp1Map2()" />
+                shape="poly" />
             </map>
           </div>
           <div class="text-box">
@@ -178,14 +181,10 @@
               class="ep2-click"
               id="ep2-lettuce"
               src="./resource/ep2_click_6.webp" />
-            <img
-              class="ep2-click"
-              id="ep2-bacon-shadow"
-              src="./resource/ep2_click_5-2.webp" />
-            <img
-              class="ep2-click"
-              id="ep2-bacon"
-              src="./resource/ep2_click_5.webp" />
+            <div class="ep2-click">
+              <img id="ep2-bacon-shadow" src="./resource/ep2_click_5-2.webp" />
+              <img id="ep2-bacon" src="./resource/ep2_click_5.webp" />
+            </div>
             <img
               class="ep2-click"
               id="ep2-tomato"
@@ -208,44 +207,38 @@
               src="./resource/ep2_static_1.webp" />
             <map name="image-map2">
               <area
-                target=""
-                alt="lettuce"
-                title="lettuce"
+                alt="양상추 빼기"
+                title="양상추 빼기"
                 href="#"
                 coords="313,610,279,612,276,626,286,638,259,639,228,658,271,665,239,697,247,714,269,724,259,731,232,731,201,724,218,717,218,707,206,697,183,697,150,748,178,764,181,785,191,803,208,797,213,824,242,822,269,826,288,832,305,831,327,831,342,826,354,835,398,832,452,861,508,860,556,832,564,800,551,770,532,771,507,782,501,760,478,754,462,775,444,768,422,778,415,749,412,721,393,704,393,687,367,686,334,684,322,641,330,631"
                 shape="poly" />
               <area
-                target=""
-                alt="bacon"
-                title="bacon"
+                alt="베이컨 빼기"
+                title="베이컨 빼기"
                 href="#"
                 coords="435,442,313,501,325,530,364,559,354,593,322,642,334,683,391,686,395,705,415,722,415,752,451,762,491,757,527,790,554,739,591,727,622,695,639,708,659,708,685,710,700,671,722,647,734,627,722,610,693,632,676,605,664,591,642,589,622,610,600,576,578,562,554,573,524,566,539,539,552,506,530,478,466,447,444,481"
                 shape="poly" />
               <area
-                target=""
-                alt="tomato"
-                title="tomato"
+                alt="토마토 빼기"
+                title="토마토 빼기"
                 href="#"
                 coords="729,226,688,256,666,295,668,331,700,365,713,404,754,395,775,412,764,443,737,473,766,537,763,556,734,571,717,595,720,612,732,624,725,639,756,660,786,636,800,587,814,524,812,497,839,490,861,476,829,463,870,420,897,364,859,288,812,239,768,222"
                 shape="poly" />
               <area
-                target=""
-                alt="cheese"
-                title="cheese"
+                alt="치즈 빼기"
+                title="치즈 빼기"
                 href="#"
                 coords="836,196,905,332,870,420,831,459,914,522,944,586,948,647,980,606,995,535,975,518,985,498,995,513,995,467,975,396,968,385,976,380,922,308,897,249,853,200"
                 shape="poly" />
               <area
-                target=""
-                alt="onion"
-                title="onion"
+                alt="양파 빼기"
+                title="양파 빼기"
                 href="#"
                 coords="959,164,949,190,926,175,910,188,893,206,892,235,902,269,929,325,961,360,975,379,965,384,971,394,985,403,976,411,990,428,1009,438,1015,472,1014,501,1005,510,995,512,985,501,975,516,985,533,1009,544,1036,513,1039,576,1066,620,1109,625,1144,594,1085,491,1031,386,973,235"
                 shape="poly" />
               <area
-                target=""
-                alt="cucumber"
-                title="cucumber"
+                alt="오이 빼기"
+                title="오이 빼기"
                 href="#"
                 coords="541,367,499,397,479,435,487,469,511,479,552,469,588,428,625,423,659,382,680,407,700,421,680,452,678,477,697,494,734,475,768,441,776,411,754,397,715,406,702,367,652,316,635,326,605,306,581,309,542,338"
                 shape="poly" />
@@ -309,9 +302,48 @@
               id="ep3-case2"
               src="./resource/ep3_click_2.webp" />
             <img
+              usemap="#image-map3"
               class="ep3-click"
               id="ep3-case1"
               src="./resource/ep3_click_1.webp" />
+            <map name="image-map3">
+              <area
+                alt="주황색 케이스"
+                title="주황색 케이스"
+                href="#"
+                coords="1165,822,1151,871,1112,953,1095,1027,1095,1072,1099,1095,1063,1173,1060,1207,1063,1233,1229,1234,1248,1133,1275,1078,1294,983,1273,977,1263,952,1273,849,1236,822,1212,831,1188,829"
+                shape="poly" />
+              <area
+                alt="노란색 케이스"
+                title="노란색 케이스"
+                href="#"
+                coords="1477,701,1280,798,1265,951,1272,974,1326,993,1390,986,1433,1008,1478,1012,1514,1005,1545,1020,1585,1027,1624,1020,1670,1035,1711,1046,1752,1040,1801,1057,1853,1066,1884,1046,1918,828,1918,784,1892,757,1840,749,1802,764,1750,742,1707,735,1670,742,1629,723,1582,716,1541,727"
+                shape="poly" />
+              <area
+                alt="빨간색 케이스"
+                title="빨간색 케이스"
+                href="#"
+                coords="1436,531,1402,517,1385,519,995,702,988,723,1019,728,1054,714,1083,714,1102,726,1138,714,1163,726,1168,755,1153,787,1126,804,1175,830,1216,835,1609,631,1609,597,1592,585,1651,556,1651,538,1626,531,1556,575,1470,542,1538,512,1543,489,1524,482,1468,509"
+                shape="poly" />
+              <area
+                alt="분홍색 케이스"
+                title="분홍색 케이스"
+                href="#"
+                coords="1577,49,1480,219,1485,241,1853,653,1889,646,1918,589,1918,385,1894,360,1874,326,1799,249,1780,212,1740,185,1657,75,1641,66,1611,39"
+                shape="poly" />
+              <area
+                alt="파란색 케이스"
+                title="파란색 케이스"
+                href="#"
+                coords="354,705,149,754,96,739,103,789,113,813,461,1164,491,1168,603,1129,625,1080,666,1056,683,1015,717,985,408,703,347,681"
+                shape="poly" />
+              <area
+                alt="초록색 케이스"
+                title="초록색 케이스"
+                href="#"
+                coords="1022,728,1056,711,1085,713,1102,723,1138,714,1170,728,1170,757,1155,785,1126,809,1111,838,1078,870,1060,877,1053,903,1019,936,995,948,992,972,961,1006,932,1020,924,1053,878,1101,849,1109,827,1154,773,1188,753,1191,729,1190,697,1208,654,1219,632,1212,608,1232,563,1232,542,1214,563,1166,600,1141,629,1080,668,1054,683,1017,719,985,741,974,758,935,792,903,822,886,834,850,870,820,888,810,897,779,937,733,987,723"
+                shape="poly" />
+            </map>
           </div>
           <div class="text-box">
             <div class="text-title bold">“아무거나”</div>
@@ -417,7 +449,42 @@
             <img class="ep6-click" src="./resource/ep6_click_3.webp" />
             <img class="ep6-click" src="./resource/ep6_click_2.webp" />
             <img class="ep6-click" src="./resource/ep6_click_1.webp" />
-            <img id="ep6-thread-front" src="./resource/ep6_static_1.webp" />
+            <img
+              id="ep6-thread-front"
+              usemap="#image-map6"
+              src="./resource/ep6_static_1.webp" />
+            <map name="image-map6">
+              <area
+                alt="난 화이트 쿠키!!"
+                title="난 화이트 쿠키!!"
+                href="#"
+                coords="1433,447,1433,488,1451,539,1463,552,1484,600,1499,623,1517,651,1541,628,1582,593,1614,574,1646,562,1680,525,1679,510,1658,484,1616,461,1575,447,1485,440"
+                shape="poly" />
+              <area
+                alt="난 초코칩 쿠키!!"
+                title="난 초코칩 쿠키!!"
+                href="#"
+                coords="1516,653,1456,681,1441,705,1378,732,1368,697,1351,695,1333,696,1273,712,1209,763,1192,783,1178,792,1161,773,1156,721,1160,666,1170,634,1192,585,1241,517,1248,500,1265,487,1280,487,1321,473,1378,451,1424,446,1429,461,1431,485,1450,537,1463,551,1484,591"
+                shape="poly" />
+              <area
+                alt="난 바나나 초코칩 쿠키!!"
+                title="난 바나나 초코칩 쿠키!!"
+                href="#"
+                coords="1687,524,1646,561,1582,592,1514,653,1541,683,1568,732,1589,790,1606,814,1638,888,1640,926,1655,926,1680,907,1723,866,1735,855,1758,795,1772,777,1777,741,1772,656,1765,630,1770,612,1768,595,1748,573,1707,526"
+                shape="poly" />
+              <area
+                alt="난 녹차맛 쿠키!!"
+                title="난 녹차맛 쿠키!!"
+                href="#"
+                coords="1375,735,1367,696,1341,696,1275,709,1209,762,1192,780,1168,794,1168,823,1195,860,1224,897,1251,909,1290,940,1316,942,1316,923,1365,850,1372,825,1363,814"
+                shape="poly" />
+              <area
+                alt="난 딸기 화이트초코칩 쿠키!!"
+                title="난 딸기 화이트초코칩 쿠키!!"
+                href="#"
+                coords="1514,651,1456,680,1441,707,1378,731,1363,809,1372,824,1365,844,1317,924,1312,951,1338,958,1368,968,1392,968,1431,975,1467,977,1500,973,1543,975,1595,951,1633,941,1640,926,1638,887,1606,812,1590,792,1565,727,1541,682"
+                shape="poly" />
+            </map>
           </div>
           <div class="text-box">
             <div class="text-title bold">“투표할게요”</div>
@@ -497,7 +564,30 @@
             <img id="ep8-people" src="./resource/ep8_static_1.webp" />
             <img class="ep8-click" src="./resource/ep8_click_3.webp" />
             <img class="ep8-click" src="./resource/ep8_click_2.webp" />
-            <img class="ep8-click" src="./resource/ep8_click_1.webp" />
+            <img
+              class="ep8-click"
+              src="./resource/ep8_click_1.webp"
+              usemap="#image-map8" />
+            <map name="image-map8">
+              <area
+                alt="마스크 벗어보기?"
+                title="마스크 벗어보기?"
+                href="#"
+                coords="534,535,524,566,508,583,510,613,535,666,566,689,629,676,676,606"
+                shape="poly" />
+              <area
+                alt="마스크 벗어보기?"
+                title="마스크 벗어보기?"
+                href="#"
+                coords="924,566,937,610,970,632,1020,656,1054,649,1087,580,1082,541,1073,512,997,531"
+                shape="poly" />
+              <area
+                alt="마스크 벗어보기?"
+                title="마스크 벗어보기?"
+                href="#"
+                coords="1226,545,1216,593,1238,640,1272,678,1311,683,1360,649,1377,606,1382,573,1300,552"
+                shape="poly" />
+            </map>
           </div>
           <div class="text-box">
             <div class="text-title bold">“그냥”</div>
@@ -532,16 +622,80 @@
               fill="none">
               <path d="M0 1080L428 0H1200V1080H0Z" fill="#828282" />
             </svg>
-            <img id="report-paper" src="./resource/report_example.webp" />
+            <img id="report-paper" src="./resource/report_paper.webp" />
           </div>
           <div class="text-box">
-            <div class="tr-head">
-              <div class="report-title bold"></div>
+            <div class="report-th">
+              <div class="th-subwrap report-title-wrap">
+                <div class="report-title bold">선택결과보고서</div>
+                <div id="report-date"></div>
+              </div>
+              <div class="th-subwrap th-stamp-title bold">
+                승
+                <br />
+                인
+              </div>
+              <div class="th-subwrap th-stamp-contents">
+                <div class="th-stamp-sub">학생</div>
+                <div class="th-stamp-sub">
+                  <div class="th-stamp bold">승인</div>
+                </div>
+                <div class="th-stamp-sub">안채영</div>
+              </div>
+              <div class="th-subwrap th-stamp-title bold">
+                결
+                <br />
+                재
+              </div>
+              <div class="th-subwrap th-stamp-contents">
+                <div class="th-stamp-sub">교수</div>
+                <div class="th-stamp-sub">
+                  <div class="th-stamp bold">승인</div>
+                </div>
+                <div class="th-stamp-sub">유동관</div>
+              </div>
             </div>
-            <div class="text-content"></div>
+            <div class="report-contents">
+              <div class="report-tr">
+                <div class="tr-index">1</div>
+                <div class="tr-txt">점심… 뭐 먹지</div>
+              </div>
+              <div class="report-tr">
+                <div class="tr-index">2</div>
+                <div class="tr-txt">샌드위치… 조합 추천해주세요</div>
+              </div>
+              <div class="report-tr">
+                <div class="tr-index">3</div>
+                <div class="tr-txt">
+                  폰 케이스 색은 아무거나… 아니, 잠시만요
+                </div>
+              </div>
+              <div class="report-tr">
+                <div class="tr-index">4</div>
+                <div class="tr-txt">캐릭터는… 랜덤 돌려야지</div>
+              </div>
+              <div class="report-tr">
+                <div class="tr-index">5</div>
+                <div class="tr-txt">인생은… 무조건 직진이지!</div>
+              </div>
+              <div class="report-tr">
+                <div class="tr-index">6</div>
+                <div class="tr-txt">모든 쿠키는 평등…할 걸?</div>
+              </div>
+              <div class="report-tr">
+                <div class="tr-index">7</div>
+                <div class="tr-txt">…저도 어떻게 해야할지 모르겠어요</div>
+              </div>
+              <div class="report-tr">
+                <div class="tr-index">8</div>
+                <div class="tr-txt">마스크 속 당신은… 음…</div>
+              </div>
+            </div>
+            <div class="report-footer">
+              2023 상명대학교 커뮤니케이션 디자인과 졸업 전시
+            </div>
           </div>
         </div>
-        <div class="page-content invisible">맺음말</div>
       </div>
     </main>
     <script type="text/javascript" src="./script.js"></script>

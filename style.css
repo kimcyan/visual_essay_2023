@@ -311,7 +311,7 @@
   align-items: center;
 }
 #ep1-1-1 {
-  animation: transformY10 5s cubic-bezier(0.4, 0, 1, 1) infinite;
+  animation: transformY10 5s ease-in-out infinite;
 }
 @keyframes transformY10 {
   0%,
@@ -335,7 +335,7 @@
 #ep2-lettuce,
 #ep2-bacon-shadow,
 #ep2-bacon {
-  animation: transformXYep2Soft1 7s infinite;
+  animation: transformXYep2Soft1 7s ease-in-out infinite;
 }
 @keyframes transformXYep2Soft1 {
   0%,
@@ -353,7 +353,7 @@
 
 #ep2-cheese,
 #ep2-bread-top {
-  animation: transformXYep2Soft2 7s infinite;
+  animation: transformXYep2Soft2 7s ease-in-out infinite;
 }
 #ep2-tomato {
   transform: translate(
@@ -361,7 +361,7 @@
       calc(min(0.625vw, 1.115vh) * (-1))
     )
     rotate(0.8deg);
-  animation: transformXYep2Soft2 7s 1s infinite;
+  animation: transformXYep2Soft2 7s 1s ease-in-out infinite;
 }
 #ep2-onion {
   transform: translate(
@@ -369,7 +369,7 @@
       calc(min(0.625vw, 1.115vh) * (-1))
     )
     rotate(0.8deg);
-  animation: transformXYep2Soft2 7s 0.5s infinite;
+  animation: transformXYep2Soft2 7s 0.5s ease-in-out infinite;
 }
 #ep2-cucumber {
   transform: translate(
@@ -377,7 +377,7 @@
       calc(min(0.625vw, 1.115vh) * (-1))
     )
     rotate(0.8deg);
-  animation: transformXYep2Soft2 7s 0.8s infinite;
+  animation: transformXYep2Soft2 7s 0.8s ease-in-out infinite;
 }
 
 @keyframes transformXYep2Soft2 {
@@ -394,6 +394,9 @@
   }
 }
 /* ep3 */
+.ep3 {
+  align-items: flex-start;
+}
 .ep3 .text-box {
   color: #131641;
 }
@@ -402,32 +405,33 @@
   width: auto;
 }
 .ep3-click {
-  animation: transformY10 2s cubic-bezier(0.4, 0, 1, 1) infinite;
+  animation: transformY10 4s ease-in-out infinite;
 }
 #ep3-case2 {
-  animation-delay: 0.1s;
-}
-#ep3-case3 {
   animation-delay: 0.2s;
 }
-#ep3-case4 {
-  animation-delay: 0.3s;
-}
-#ep3-case5 {
+#ep3-case3 {
   animation-delay: 0.4s;
 }
+#ep3-case4 {
+  animation-delay: 0.6s;
+}
+#ep3-case5 {
+  animation-delay: 0.8s;
+}
 #ep3-case6 {
-  animation-delay: 0.5s;
+  animation-delay: 1s;
 }
 /* ep4 */
 .ep4 {
   justify-content: flex-end;
+  align-items: flex-start;
 }
 .ep4 .text-box {
   text-align: right;
 }
 .ep4-twinkle {
-  animation: twinkleColor 0.5s infinite;
+  animation: twinkleColor 0.5s ease-in-out infinite;
 }
 .ep4-twinkle:nth-child(2) {
   animation-delay: 0.1s;
@@ -454,6 +458,7 @@
 }
 .ep5 .text-box {
   text-align: right;
+  padding-left: 0;
 }
 #ep5-arrow {
   width: min(21.979vw, 39.07vh);
@@ -483,8 +488,91 @@
 }
 
 /* ep8 */
+.ep8 {
+  align-items: flex-start;
+}
 
-/* 선택 결과 */
+/* 선택 결과 보고서*/
+.report {
+  justify-content: center;
+}
+.report .text-box {
+  color: #969696;
+  width: min(36.77vw, 65.37vh);
+  margin-block: min(3.541vw, 6.296vh);
+  padding: 3% 4% 3% 7%;
+}
+.report-th {
+  font-size: min(1.25vw, 2.05vh);
+  display: flex;
+}
+.th-subwrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.report-title-wrap {
+  flex: 1;
+}
+.report-title {
+  font-size: min(2.22vw, 3.62vh);
+  letter-spacing: 0.35em;
+  margin-left: 0.35em;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+#report-date {
+  padding-block: min(0.468vw, 0.833vh);
+  text-align: left;
+  width: 97%;
+}
+.th-stamp-title {
+  width: min(2.083vw, 3.7vh);
+}
+.th-stamp-contents {
+  width: min(5.052vw, 8.98vh);
+}
+.th-stamp-sub {
+  padding-block: min(0.468vw, 0.833vh);
+}
+.th-stamp {
+  width: min(3.125vw, 5.555vh);
+  font-size: min(1.562vw, 2.777vh);
+  aspect-ratio: 1 / 1;
+  border: min(0.3125vw, 0.5555vh) solid #ff6868;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff6868;
+  transform: rotate(-15deg);
+}
+.report-contents {
+  font-size: min(1.5625vw, 2.777vh);
+}
+.report-tr {
+  display: flex;
+}
+.tr-index {
+  width: 10.5%;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tr-txt {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.7em;
+}
+.report-footer {
+  font-size: min(0.833vw, 1.481vh);
+  text-align: right;
+}
 
 /*페이지 전환 애니메이션*/
 @keyframes fadein {
