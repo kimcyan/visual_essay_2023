@@ -50,6 +50,7 @@
   position: fixed;
   top: 0;
   z-index: 99;
+  border-top: 1px solid #f1f1f1;
 }
 .menu-wrapper:hover {
   opacity: 1;
@@ -83,6 +84,7 @@
   top: 0;
   z-index: 998;
   border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
 }
 .nav-inner {
   width: 300px;
@@ -574,6 +576,7 @@
 .report-footer {
   font-size: min(0.833vw, 1.481vh);
   text-align: right;
+  line-height: 2.2em;
 }
 
 /* 도움말 */
@@ -632,4 +635,7 @@
 /* 효과 전용 class */
 .invisible {
   display: none;
+}
+#dragging {
+  cursor: grab;
 }
