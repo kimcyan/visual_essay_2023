@@ -15,7 +15,7 @@ let currentPage = 0;
 
 let backgroundColor = [
   '#fe8800',
-  '#f5f5f5',
+  '#f9f9f9',
   '#ad00fe',
   '#c62b29',
   '#ffe3be',
