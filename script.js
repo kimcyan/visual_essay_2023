@@ -1,5 +1,5 @@
 const listBtn = document.querySelector('#list-btn');
-const resetBtn = document.querySelector('#reset-btn');
+//const resetBtn = document.querySelector('#reset-btn');
 const helpBtn = document.querySelector('#help-btn');
 
 const navWrap = document.querySelector('#nav-wrapper');
@@ -15,7 +15,7 @@ let currentPage = 0;
 
 let backgroundColor = [
   '#fe8800',
-  'white',
+  '#f5f5f5',
   '#ad00fe',
   '#c62b29',
   '#ffe3be',
@@ -93,6 +93,46 @@ const togglePageBtnDisabled = (index) => {
     nextBtn.disabled = false;
   }
 };
+
+/* 표지 애니메이션 */
+
+const dragging = document.getElementById('dragging');
+const dragged = document.getElementById('dragged');
+let originalX;
+
+const calcRightValue = () => {
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const rightValue = Math.min(0.597916 * vw, 1.0629629 * vh) * -1;
+  dragged.style.right = rightValue + 'px';
+  console.log(rightValue);
+  originalX = rightValue;
+};
+calcRightValue();
+
+window.addEventListener('resize', calcRightValue);
+
+let isDragging = false;
+let startX = originalX;
+
+dragging.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  startX = e.clientX;
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (isDragging) {
+    const afterX = originalX + startX - e.clientX;
+    dragged.style.right = afterX + 'px';
+  }
+});
+
+document.addEventListener('mouseup', () => {
+  if (isDragging) {
+    isDragging = false;
+    dragged.style.right = originalX + 'px';
+  }
+});
 
 /* 목차 클릭 이벤트 */
 const indexListItems = document.querySelectorAll('.index-list-content');
@@ -172,6 +212,7 @@ const changeCaseColor = (map, imgs) => {
       for (i = 0; i < 6; i++) {
         imgs[i].style.filter = 'hue-rotate(' + caseColorHue[i][index] + 'deg)';
       }
+      disableMap(map);
     });
   });
 };
@@ -197,3 +238,12 @@ let tM = today.getMonth();
 let tD = today.getDate();
 document.querySelector('#report-date').innerHTML =
   tY + '년 ' + tM + '월 ' + tD + '일 ';
+
+//도움말
+const helpWrap = document.querySelector('.help-wrap');
+helpWrap.addEventListener('click', () => {
+  toggleDisplay(helpWrap);
+});
+helpBtn.addEventListener('click', () => {
+  toggleDisplay(helpWrap);
+});
