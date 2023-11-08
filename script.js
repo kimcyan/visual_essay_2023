@@ -105,7 +105,6 @@ const calcRightValue = () => {
   const vh = window.innerHeight;
   const rightValue = Math.min(0.597916 * vw, 1.0629629 * vh) * -1;
   dragged.style.right = rightValue + 'px';
-  console.log(rightValue);
   originalX = rightValue;
 };
 calcRightValue();
@@ -219,6 +218,25 @@ const changeCaseColor = (map, imgs) => {
 
 changeCaseColor(map3, ep3Imgs);
 
+// ep4
+const ep4statue = document.querySelector('#ep4-statue');
+const ep4mouse = document.querySelector('.ep4-mouse');
+
+const statueColorChange = [
+  [45, 90, 135, 163, 225, 315, 0],
+  ['#592853', '#592828', '#593828', '#594e28', '#2b5928', '#283359', '#282959'],
+];
+let ep4ColorIndex = 0;
+
+const changeStatueColor = () => {
+  if (ep4ColorIndex === statueColorChange[0].length - 1) ep4ColorIndex = -1;
+  ep4statue.style.filter =
+    'hue-rotate(' + statueColorChange[0][++ep4ColorIndex] + 'deg)';
+  backgroundColor[currentPage] = statueColorChange[1][ep4ColorIndex];
+  changeBackgroundColor(currentPage);
+};
+ep4mouse.addEventListener('click', changeStatueColor);
+
 // ep6
 const ep6Imgs = document.querySelectorAll('.ep6-click');
 const map6 = document.querySelector('map[name="image-map6"]');
@@ -234,7 +252,7 @@ clickToInvisible(map8, ep8Imgs);
 // 날짜
 let today = new Date();
 let tY = today.getFullYear();
-let tM = today.getMonth();
+let tM = today.getMonth() + 1;
 let tD = today.getDate();
 document.querySelector('#report-date').innerHTML =
   tY + '년 ' + tM + '월 ' + tD + '일 ';
