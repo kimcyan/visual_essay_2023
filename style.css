@@ -310,6 +310,19 @@
 .cover-author {
   font-size: min(1.25vw, 2.23vh);
 }
+#cover-move {
+  animation: transformY5 5s ease-in-out infinite;
+}
+@keyframes transformY5 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(calc(min(0.625vw, 1.125vh) * (-1)));
+  }
+}
+
 /* ep1 */
 .ep1 {
   align-items: center;
@@ -517,6 +530,22 @@
 .ep6 {
   align-items: flex-end;
 }
+#ep6-back-move {
+  width: min(34.0625vw, 60.555vh);
+  top: min(8.333vw, 14.814vh);
+  left: min(69.27vw, 123.148vh);
+  transform-origin: 5% 13%;
+  animation: 4s rotateCookie ease-in-out infinite;
+}
+@keyframes rotateCookie {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
 
 /* ep7 */
 .ep7 {
@@ -537,20 +566,30 @@
 }
 
 @keyframes waterAnimation {
-  0% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
     opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
 /* ep8 */
 .ep8 {
   align-items: flex-start;
+}
+.ep8 .bg-cut-w {
+  animation: 6s bgBrightnessChange infinite;
+}
+@keyframes bgBrightnessChange {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 /* 선택 결과 보고서*/
