@@ -98,6 +98,7 @@ const togglePageBtnDisabled = (index) => {
 
 const dragging = document.getElementById('dragging');
 const dragged = document.getElementById('dragged');
+const dragPlace = document.getElementById('drag-place');
 let originalX;
 
 const calcRightValue = () => {
@@ -122,6 +123,7 @@ dragging.addEventListener('mousedown', (e) => {
 document.addEventListener('mousemove', (e) => {
   if (isDragging) {
     const afterX = originalX + startX - e.clientX;
+    if (afterX > -1) afterX = -1;
     dragged.style.right = afterX + 'px';
   }
 });
@@ -306,6 +308,71 @@ const changeStatueColor = () => {
   updateReport(4, ep4ColorIndex);
 };
 ep4mouse.addEventListener('click', changeStatueColor);
+
+// ep5
+const magnet = document.querySelector('#ep5-magnet');
+const map5 = document.querySelector('map[name="magnet-map"]');
+const root = document.documentElement;
+let arrowAngle = -17.45;
+const ep5value = [
+  [-48, -28, -7, 6.34, 21, 32, 60],
+  [
+    'min(-1vw, -1.777vh)',
+    'min(7vw, 12.444vh)',
+    'min(15vw, 26.666vh)',
+    'min(20.2vw, 35.91vh)',
+    'min(32vw, 56.888vh)',
+    'min(44vw, 78.22vh)',
+    'min(53vw, 94.22vh)',
+  ],
+  [
+    'min(34vw, 60.444vh)',
+    'min(40vw, 71.111vh)',
+    'min(44vw, 78.222vh)',
+    'min(46.5vw, 82.667vh)',
+    'min(45.5625vw, 82.6vh)',
+    'min(39.44vw, 70.115vh)',
+    'min(27.44vw, 48.796vh)',
+  ],
+  [-51, -36, -23, -17.45, 10, 42, 58],
+];
+let magnetIndex = 3;
+const moveMagnet = (map) => {
+  const maps = map.querySelectorAll('area');
+  maps[0].addEventListener('click', () => {
+    if (magnetIndex > 0) {
+      console.log(0);
+      magnetIndex -= 1;
+      magnetUpdate();
+    }
+  });
+  maps[1].addEventListener('click', () => {
+    if (magnetIndex < 6) {
+      console.log(1);
+      magnetIndex += 1;
+      magnetUpdate();
+    }
+  });
+};
+const magnetUpdate = () => {
+  magnet.style.transform = `rotate(${ep5value[0][magnetIndex]}deg)`;
+  magnet.style.top = ep5value[1][magnetIndex];
+  magnet.style.left = ep5value[2][magnetIndex];
+  arrowAngle = ep5value[3][magnetIndex];
+  root.style.setProperty('--arrow-angle', `${arrowAngle}deg`);
+  if (magnetIndex < 3)
+    reportContainers[4].innerHTML = `인생의 방향은&nbsp;<span style="color: #F05052">왼쪽</span>으로&nbsp;<span style="color: #639EEA">약 ${
+      ep5value[0][3] - ep5value[0][magnetIndex] - 0.34
+    }°</span>`;
+  else if (magnetIndex > 3)
+    reportContainers[4].innerHTML = `인생의 방향은&nbsp;<span style="color: #F05052">오른쪽</span>으로&nbsp;<span style="color: #639EEA">약 ${
+      ep5value[0][3] + ep5value[0][magnetIndex] - 0.34
+    }°</span>`;
+  else
+    reportContainers[4].innerHTML = `인생은 역시&nbsp;<span style="color: #F05052">직진</span>이 아닐까?</span>`;
+};
+
+moveMagnet(map5);
 
 // ep6
 const ep6Imgs = document.querySelectorAll('.ep6-click');

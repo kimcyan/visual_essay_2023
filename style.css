@@ -464,31 +464,35 @@
   text-align: right;
   padding-left: 0;
 }
+:root {
+  --arrow-angle: -17.45deg;
+}
 #ep5-arrow {
   width: min(21.979vw, 39.07vh);
   top: min(26.7vw, 47.467vh);
   left: min(15.5vw, 27.556vh);
-  transform: rotate(-17.45deg);
+  transform: rotate(var(--arrow-angle));
   animation: arrowRotateBefore 2s cubic-bezier(0.58, 0.01, 0.41, 0.98);
+  transition: 0.3s;
 }
 @keyframes arrowRotateBefore {
   0% {
-    transform: rotate(-47.45deg);
+    transform: rotate(calc(var(--arrow-angle) - 30deg));
   }
   20% {
-    transform: rotate(32.55deg);
+    transform: rotate(calc(var(--arrow-angle) + 40deg));
   }
   40% {
-    transform: rotate(-42.45deg);
+    transform: rotate(calc(var(--arrow-angle) - 25deg));
   }
   60% {
-    transform: rotate(-2.45deg);
+    transform: rotate(calc(var(--arrow-angle) + 15deg));
   }
   80% {
-    transform: rotate(-21.45deg);
+    transform: rotate(calc(var(--arrow-angle) - 4deg));
   }
   100% {
-    transform: rotate(-17.45deg);
+    transform: rotate(var(--arrow-angle));
   }
 }
 #ep5-magnet {
@@ -496,6 +500,7 @@
   top: min(20.2vw, 35.91vh);
   left: min(46.5vw, 82.667vh);
   transform: rotate(6.34deg);
+  transition: 0.3s;
   cursor: pointer;
 }
 
