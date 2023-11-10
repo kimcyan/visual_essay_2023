@@ -468,6 +468,9 @@
 .ep4-twinkle:nth-child(4) {
   animation-delay: 0.4s;
 }
+.slow .ep4-twinkle {
+  animation-duration: 2s;
+}
 @keyframes twinkleColor {
   0%,
   100% {

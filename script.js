@@ -281,6 +281,7 @@ changeCaseColor(map3, ep3Imgs);
 // ep4
 const ep4statue = document.querySelector('#ep4-statue');
 const ep4mouse = document.querySelector('#ep4-mouse');
+const ep4wrap = document.querySelector('.ep4');
 
 const statueColorChange = [
   [0, 45, 90, 135, 163, 225, 315],
@@ -295,6 +296,7 @@ const changeStatueColor = () => {
   backgroundColor[currentPage] = statueColorChange[1][ep4ColorIndex];
   changeBackgroundColor(currentPage);
   updateReport(4, ep4ColorIndex);
+  ep4wrap.classList.add('slow');
 };
 ep4mouse.addEventListener('click', changeStatueColor);
 
