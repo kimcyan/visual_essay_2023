@@ -141,41 +141,109 @@ indexListItems.forEach((item, index) => {
   });
 });
 
-const ep1Select = null;
-const ep2Select = null;
-const ep3Select = null;
-const ep4Select = null;
-const ep5Select = {
+let ep1Select = null;
+let ep2Select = null;
+let ep3Select = null;
+let ep4Select = null;
+let ep5Select = {
   direction: null,
   anlge: null,
 };
-const ep6Select = null;
-const ep8Select = null;
+let ep6Select = null;
+let ep8Select = null;
 
 /* 선택 결과 보고서 */
 const reportContainers = document.querySelectorAll('.tr-txt');
-const reportContents = [
+const ep1Opt = [
+  `점심은&nbsp;<span style="color:#FE8800">한식</span>으로 먹을래`,
+  `점심은&nbsp;<span style="color:#5B7D47">양식</span>으로 먹을래`,
+];
+
+const ep2Opt = [
+  `샌드위치에서&nbsp;<span style="color:#A4C955">양상추</span>는 빼주세요`,
+  `샌드위치에서&nbsp;<span style="color:#FA5D4E">베이컨</span>은 빼주세요`,
+  `샌드위치에서&nbsp;<span style="color:#EA4232">토마토</span>는 빼주세요`,
+  `샌드위치에서&nbsp;<span style="color:#FAB74C">치즈</span>는 빼주세요`,
+  `샌드위치에서&nbsp;<span style="color:#A81D9C">양파</span>는 빼주세요`,
+  `샌드위치에서&nbsp;<span style="color:#508827">오이</span>는 빼주세요`,
+];
+const ep3Opt = [
+  `폰 케이스는&nbsp;<span style="color:#FBAD3E">주황색</span>이 좋겠어요`,
+  `폰 케이스는&nbsp;<span style="color:#E1B24A">노란색</span>이 좋겠어요`,
+  `폰 케이스는&nbsp;<span style="color:#B52928">빨간색</span>이 좋겠어요`,
+  `폰 케이스는&nbsp;<span style="color:#FE918B">분홍색</span>이 좋겠어요`,
+  `폰 케이스는&nbsp;<span style="color:#4E62A0">파란색</span>이 좋겠어요`,
+  `폰 케이스는&nbsp;<span style="color:#2D7972">초록색</span>이 좋겠어요`,
+];
+const ep4Opt = [
+  `캐릭터는&nbsp;<span style="color:#d12ebf">분홍색</span>으로 꾸며야겠어`,
+  `캐릭터는&nbsp;<span style="color:#f52f4f">빨간색</span>으로 꾸며야겠어`,
+  `캐릭터는&nbsp;<span style="color:#bf4a00">주황색</span>으로 꾸며야겠어`,
+  `캐릭터는&nbsp;<span style="color:#7c6100">노란색</span>으로 꾸며야겠어`,
+  `캐릭터는&nbsp;<span style="color:#008800">초록색</span>으로 꾸며야겠어`,
+  `캐릭터는&nbsp;<span style="color:#006dd1">파란색</span>으로 꾸며야겠어`,
+  `캐릭터는&nbsp;<span style="color:#6848F5">보라색</span>으로 꾸며야겠어`,
+];
+const ep6Opt = [
+  `난&nbsp;<span style="color:#CCBE95">화이트 쿠키</span> 편이야!`,
+  `난&nbsp;<span style="color:#C29A6A">초코칩 쿠키</span> 편이야!`,
+  `난&nbsp;<span style="color:#E2B449">바나나 초코칩 쿠키</span> 편이야!`,
+  `난&nbsp;<span style="color:#789C2B">녹차맛 쿠키</span> 편이야!`,
+  `난&nbsp;<span style="color:#F37781">딸기 화이트초코칩 쿠키</span> 편이야!`,
+];
+const ep8Opt = [
+  `당신은 마스크 속에서&nbsp;<span style="color:#B03F61">무표정</span>이에요`,
+  `당신은 마스크 속에서&nbsp;<span style="color:#D97433">웃고</span>있어요`,
+  `당신은 마스크 속에서&nbsp;<span style="color:#258B6E">시무룩</span>해요`,
+];
+
+let reportContents = [
   `점심은 ${ep1Select}으로 먹을래`,
   `샌드위치에서 ${ep2Select} 빼주세요`,
   `폰 케이스는 ${ep3Select}이 좋겠어요`,
   `캐릭터는 ${ep4Select}로 꾸며야겠어`,
-  `인생의 방향은 <span class="color: #F05052">${ep5Select.direction}으로 <span class="color: #639EEA">약 ${ep5Select.angle}</span>`,
+  `인생의 방향은 <span style="color: #F05052">${ep5Select.direction}으로 <span style="color: #639EEA">약 ${ep5Select.angle}</span>`,
   `난 ${ep6Select} 편이야!`,
-  `이렇게 해보는 건 <span class="color: #0F156D">어때?</span>`,
+  `이렇게 해보는 건 <span style="color: #0F156D">어때?</span>`,
   `마스크 속 당신은 ${ep8Select}`,
 ];
+
+const updateReport = (ep, index) => {
+  switch (ep) {
+    case 1:
+      reportContainers[0].innerHTML = ep1Opt[index];
+      break;
+    case 2:
+      reportContainers[1].innerHTML = ep2Opt[index];
+      break;
+    case 3:
+      reportContainers[2].innerHTML = ep3Opt[index];
+      break;
+    case 4:
+      reportContainers[3].innerHTML = ep4Opt[index];
+      break;
+    case 6:
+      reportContainers[5].innerHTML = ep6Opt[index];
+      break;
+    case 8:
+      reportContainers[7].innerHTML = ep8Opt[index];
+      break;
+    default:
+  }
+};
 
 /* 이미지 클릭 이벤트 */
 const disableMap = (map) => {
   map.parentNode.removeChild(map);
 };
 
-const clickToInvisible = (map, imgs) => {
+const clickToInvisible = (ep, map, imgs) => {
   const maps = map.querySelectorAll('area');
   maps.forEach((element, index) => {
     element.addEventListener('click', () => {
       imgs[index].classList.add('invisible');
       disableMap(map);
+      updateReport(ep, index);
     });
   });
 };
@@ -184,13 +252,13 @@ const clickToInvisible = (map, imgs) => {
 const ep1Imgs = document.querySelectorAll('.ep1-click');
 const map1 = document.querySelector('map[name="image-map1"]');
 
-clickToInvisible(map1, ep1Imgs);
+clickToInvisible(1, map1, ep1Imgs);
 
 // ep2
 const ep2Imgs = document.querySelectorAll('.ep2-click');
 const map2 = document.querySelector('map[name="image-map2"]');
 
-clickToInvisible(map2, ep2Imgs);
+clickToInvisible(2, map2, ep2Imgs);
 
 // ep3
 const ep3Imgs = document.querySelectorAll('.ep3-click');
@@ -212,6 +280,7 @@ const changeCaseColor = (map, imgs) => {
         imgs[i].style.filter = 'hue-rotate(' + caseColorHue[i][index] + 'deg)';
       }
       disableMap(map);
+      updateReport(3, index);
     });
   });
 };
@@ -234,6 +303,7 @@ const changeStatueColor = () => {
     'hue-rotate(' + statueColorChange[0][++ep4ColorIndex] + 'deg)';
   backgroundColor[currentPage] = statueColorChange[1][ep4ColorIndex];
   changeBackgroundColor(currentPage);
+  updateReport(4, ep4ColorIndex);
 };
 ep4mouse.addEventListener('click', changeStatueColor);
 
@@ -241,13 +311,13 @@ ep4mouse.addEventListener('click', changeStatueColor);
 const ep6Imgs = document.querySelectorAll('.ep6-click');
 const map6 = document.querySelector('map[name="image-map6"]');
 
-clickToInvisible(map6, ep6Imgs);
+clickToInvisible(6, map6, ep6Imgs);
 
 // ep8
 const ep8Imgs = document.querySelectorAll('.ep8-click');
 const map8 = document.querySelector('map[name="image-map8"]');
 
-clickToInvisible(map8, ep8Imgs);
+clickToInvisible(8, map8, ep8Imgs);
 
 // 날짜
 let today = new Date();
