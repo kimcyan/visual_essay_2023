@@ -199,17 +199,6 @@ const ep8Opt = [
   `당신은 마스크 속에서&nbsp;<span style="color:#258B6E">시무룩</span>해요`,
 ];
 
-let reportContents = [
-  `점심은 ${ep1Select}으로 먹을래`,
-  `샌드위치에서 ${ep2Select} 빼주세요`,
-  `폰 케이스는 ${ep3Select}이 좋겠어요`,
-  `캐릭터는 ${ep4Select}로 꾸며야겠어`,
-  `인생의 방향은 <span style="color: #F05052">${ep5Select.direction}으로 <span style="color: #639EEA">약 ${ep5Select.angle}</span>`,
-  `난 ${ep6Select} 편이야!`,
-  `이렇게 해보는 건 <span style="color: #0F156D">어때?</span>`,
-  `마스크 속 당신은 ${ep8Select}`,
-];
-
 const updateReport = (ep, index) => {
   switch (ep) {
     case 1:
@@ -379,6 +368,21 @@ const ep6Imgs = document.querySelectorAll('.ep6-click');
 const map6 = document.querySelector('map[name="image-map6"]');
 
 clickToInvisible(6, map6, ep6Imgs);
+
+// ep7
+const ep7Imgs = document.querySelectorAll('.thread');
+const map7 = document.querySelector('map[name="image-map7"]');
+
+const clickToVisible = (map, imgs) => {
+  const maps = map.querySelectorAll('area');
+  maps.forEach((element, index) => {
+    element.addEventListener('click', () => {
+      imgs[index].classList.remove('opacity');
+      reportContainers[6].innerHTML = `이렇게 해보는 건&nbsp;<span style="color: #0F156D">어때?</span>`;
+    });
+  });
+};
+clickToVisible(map7, ep7Imgs);
 
 // ep8
 const ep8Imgs = document.querySelectorAll('.ep8-click');

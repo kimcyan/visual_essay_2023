@@ -512,9 +512,31 @@
 /* ep7 */
 .ep7 {
   justify-content: flex-end;
+  align-items: flex-start;
 }
 .ep7 .text-box {
   text-align: right;
+}
+.thread {
+  transition: 0.3s;
+}
+.water-anime1 {
+  animation: 4s waterAnimation infinite;
+}
+.water-anime2 {
+  animation: 4s waterAnimation 2s infinite;
+}
+
+@keyframes waterAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* ep8 */
@@ -664,4 +686,7 @@
 }
 #dragging {
   cursor: grab;
+}
+.opacity {
+  opacity: 0;
 }
