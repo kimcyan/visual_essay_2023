@@ -178,13 +178,13 @@ const ep3Opt = [
   `폰 케이스는&nbsp;<span style="color:#2D7972">초록색</span>이 좋겠어요`,
 ];
 const ep4Opt = [
+  `캐릭터는&nbsp;<span style="color:#6848F5">보라색</span>으로 꾸며야겠어`,
   `캐릭터는&nbsp;<span style="color:#d12ebf">분홍색</span>으로 꾸며야겠어`,
   `캐릭터는&nbsp;<span style="color:#f52f4f">빨간색</span>으로 꾸며야겠어`,
   `캐릭터는&nbsp;<span style="color:#bf4a00">주황색</span>으로 꾸며야겠어`,
   `캐릭터는&nbsp;<span style="color:#7c6100">노란색</span>으로 꾸며야겠어`,
   `캐릭터는&nbsp;<span style="color:#008800">초록색</span>으로 꾸며야겠어`,
   `캐릭터는&nbsp;<span style="color:#006dd1">파란색</span>으로 꾸며야겠어`,
-  `캐릭터는&nbsp;<span style="color:#6848F5">보라색</span>으로 꾸며야겠어`,
 ];
 const ep6Opt = [
   `난&nbsp;<span style="color:#CCBE95">화이트 쿠키</span> 편이야!`,
@@ -195,7 +195,7 @@ const ep6Opt = [
 ];
 const ep8Opt = [
   `당신은 마스크 속에서&nbsp;<span style="color:#B03F61">무표정</span>이에요`,
-  `당신은 마스크 속에서&nbsp;<span style="color:#D97433">웃고</span>있어요`,
+  `당신은 마스크 속에서&nbsp;<span style="color:#D97433">웃어요</span>`,
   `당신은 마스크 속에서&nbsp;<span style="color:#258B6E">시무룩</span>해요`,
 ];
 
@@ -280,11 +280,11 @@ changeCaseColor(map3, ep3Imgs);
 
 // ep4
 const ep4statue = document.querySelector('#ep4-statue');
-const ep4mouse = document.querySelector('.ep4-mouse');
+const ep4mouse = document.querySelector('#ep4-mouse');
 
 const statueColorChange = [
-  [45, 90, 135, 163, 225, 315, 0],
-  ['#592853', '#592828', '#593828', '#594e28', '#2b5928', '#283359', '#282959'],
+  [0, 45, 90, 135, 163, 225, 315],
+  ['#282959', '#592853', '#592828', '#593828', '#594e28', '#2b5928', '#283359'],
 ];
 let ep4ColorIndex = 0;
 

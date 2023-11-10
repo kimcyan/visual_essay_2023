@@ -434,6 +434,15 @@
 .ep4 .text-box {
   text-align: right;
 }
+#ep4-mouse {
+  width: min(5.625vw, 10vh);
+  top: min(32.36vw, 57.53vh);
+  left: min(66.25vw, 117.777vh);
+  cursor: pointer;
+}
+.ep4-mouse-z {
+  z-index: 1;
+}
 .ep4-twinkle {
   animation: twinkleColor 0.5s ease-in-out infinite;
 }
