@@ -232,7 +232,7 @@ const clickToInvisible = (ep, map, imgs) => {
   const maps = map.querySelectorAll('area');
   maps.forEach((element, index) => {
     element.addEventListener('click', () => {
-      imgs[index].classList.add('invisible');
+      imgs[index].classList.add('opacity');
       disableMap(map);
       updateReport(ep, index);
     });
