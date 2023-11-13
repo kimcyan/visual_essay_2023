@@ -705,8 +705,8 @@
   align-items: center;
 }
 .help-dot-wrap {
-  color: rgba(255, 255, 255, 0.7);
-  border: min(0.2083vw, 0.37vh) dashed #fff;
+  border: min(0.2083vw, 0.37vh) dashed rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.4);
 }
 .help-top-dot {
   width: calc(100% - min(0.2083vw, 0.37vh) * 2);
