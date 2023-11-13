@@ -57,13 +57,14 @@
 }
 .menu-wrapper .material-symbols-rounded {
   margin-bottom: -1px;
+  font-size: calc(16px + min(0.3125vw, 0.5556vh));
 }
 .menu-right {
   display: flex;
 }
 .menu-btn {
-  padding: 18px 20px;
-  font-size: 18px;
+  padding: calc(6px + min(0.625vw, 1.111vh));
+  font-size: calc(12px + min(0.3125vw, 0.5556vh));
   color: #828282;
 }
 #list-btn {
