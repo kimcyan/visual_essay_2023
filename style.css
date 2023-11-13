@@ -160,14 +160,14 @@
   z-index: 9;
 }
 .paging-btn .material-symbols-rounded {
-  font-size: 32px;
+  font-size: calc(20px + min(0.625vw, 1.111vh));
 }
 .paging-btn:disabled {
   display: none;
 }
 #prev-btn {
   left: 0;
-  padding-inline: 0 16px;
+  padding-inline: 0 calc(6px + min(0.625vw, 1.111vh));
   background: linear-gradient(
     270deg,
     rgba(0, 0, 0, 0) 0%,
@@ -176,7 +176,7 @@
 }
 #next-btn {
   right: 0;
-  padding-inline: 16px 0;
+  padding-inline: calc(6px + min(0.625vw, 1.111vh)) 0;
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0) 0%,
@@ -206,7 +206,7 @@
 }
 .text-title {
   font-size: min(2.22vw, 3.62vh);
-  margin-bottom: calc(2.22vw * 9 / 16);
+  margin-bottom: min(calc(2.22vw * 9 / 16), calc(3.62vh * 9 / 16));
 }
 .text-content {
   font-size: min(1.25vw, 2.05vh);
@@ -685,10 +685,76 @@
   top: 0;
   z-index: 999;
   cursor: pointer;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+.help-top-wrap {
+  position: absolute;
+  top: 0;
+  color: white;
+  font-size: min(1.667vw, 2.962vh);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.help-dot-wrap {
+  color: rgba(255, 255, 255, 0.7);
+  border: min(0.2083vw, 0.37vh) dashed #fff;
+}
+.help-top-dot {
+  width: calc(100% - min(0.2083vw, 0.37vh) * 2);
+  display: flex;
+  justify-content: space-between;
+}
+.help-dot-wrap span {
+  padding: calc(6px + min(0.625vw, 1.111vh));
+  font-size: calc(12px + min(0.3125vw, 0.5556vh));
+}
+.help-top-wrap .bold {
+  padding: calc(6px + min(0.625vw, 1.111vh));
+  font-size: min(1.667vw, 2.962vh);
+}
+.help-img-wrap {
+  aspect-ratio: 16 / 9;
+  width: min(100vw, 100vh * 16 / 9);
 }
 .help-img {
   width: 100%;
   height: auto;
+  position: absolute;
+}
+.help-nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  aspect-ratio: 16 / 9;
+  color: white;
+  font-size: min(1.667vw, 2.962vh);
+}
+.help-nav-box {
+  display: flex;
+}
+.help-nav-box span,
+.help-nav-box .help-dot-wrap {
+  display: flex;
+  align-items: center;
+}
+.help-nav-box span {
+  padding: calc(6px + min(0.625vw, 1.111vh));
+}
+.help-nav-box .material-symbols-rounded {
+  font-size: calc(20px + min(0.3125vw, 0.5556vh));
+}
+.help-left-box .material-symbols-rounded {
+  padding-left: 0;
+}
+.help-right-box .material-symbols-rounded {
+  padding-right: 0;
 }
 .help-click {
   background-color: white;
