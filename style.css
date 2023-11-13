@@ -128,6 +128,7 @@
 .book-author {
   font-size: 14px;
   color: #828282;
+  text-decoration: none;
 }
 .nav-list {
   padding: 12px 32px;
