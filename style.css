@@ -65,7 +65,7 @@
 .menu-btn {
   padding: calc(6px + min(0.625vw, 1.111vh));
   font-size: calc(12px + min(0.3125vw, 0.5556vh));
-  color: #828282;
+  color: #333333;
 }
 #list-btn {
   gap: 6px;
@@ -723,11 +723,13 @@
 .help-img-wrap {
   aspect-ratio: 16 / 9;
   width: min(100vw, 100vh * 16 / 9);
+  position: relative;
 }
 .help-img {
   width: 100%;
   height: auto;
   position: absolute;
+  top: 0;
 }
 .help-nav-wrap {
   display: flex;
