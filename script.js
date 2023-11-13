@@ -187,11 +187,11 @@ const ep4Opt = [
   `캐릭터는&nbsp;<span style="color:#006dd1">파란색</span>으로 꾸며야겠어`,
 ];
 const ep6Opt = [
-  `난&nbsp;<span style="color:#CCBE95">화이트 쿠키</span> 편이야!`,
-  `난&nbsp;<span style="color:#C29A6A">초코칩 쿠키</span> 편이야!`,
-  `난&nbsp;<span style="color:#E2B449">바나나 초코칩 쿠키</span> 편이야!`,
-  `난&nbsp;<span style="color:#789C2B">녹차맛 쿠키</span> 편이야!`,
-  `난&nbsp;<span style="color:#F37781">딸기 화이트초코칩 쿠키</span> 편이야!`,
+  `난&nbsp;<span style="color:#CCBE95">화이트 쿠키</span>&nbsp;편이야!`,
+  `난&nbsp;<span style="color:#C29A6A">초코칩 쿠키</span>&nbsp;편이야!`,
+  `난&nbsp;<span style="color:#E2B449">바나나 초코칩 쿠키</span>&nbsp;편이야!`,
+  `난&nbsp;<span style="color:#789C2B">녹차맛 쿠키</span>&nbsp;편이야!`,
+  `난&nbsp;<span style="color:#F37781">딸기 화이트초코칩 쿠키</span>&nbsp;편이야!`,
 ];
 const ep8Opt = [
   `당신은 마스크 속에서&nbsp;<span style="color:#B03F61">무표정</span>이에요`,
