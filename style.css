@@ -204,7 +204,7 @@
 .text-box {
   color: white;
   padding: 4.167%;
-  z-index: 10;
+  z-index: 5;
 }
 .text-title {
   font-size: min(2.22vw, 3.62vh);
@@ -305,7 +305,7 @@
   align-items: center;
   margin: auto;
   padding-bottom: min(6vw, 10.65vh);
-  z-index: 10;
+  z-index: 5;
 }
 .cover-title {
   font-size: min(6.667vw, 11.86vh);
@@ -607,7 +607,7 @@
   width: min(36.77vw, 65.37vh);
   margin-block: min(3.541vw, 6.296vh);
   padding: 3% 4% 3% 7%;
-  z-index: 10;
+  z-index: 5;
 }
 .report-th {
   font-size: min(1.25vw, 2.05vh);
