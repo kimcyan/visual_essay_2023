@@ -204,6 +204,7 @@
 .text-box {
   color: white;
   padding: 4.167%;
+  z-index: 10;
 }
 .text-title {
   font-size: min(2.22vw, 3.62vh);
