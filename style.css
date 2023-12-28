@@ -217,7 +217,6 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: -1;
 }
 .img-box img {
   width: 100%;
@@ -606,6 +605,7 @@
   width: min(36.77vw, 65.37vh);
   margin-block: min(3.541vw, 6.296vh);
   padding: 3% 4% 3% 7%;
+  z-index: 10;
 }
 .report-th {
   font-size: min(1.25vw, 2.05vh);
